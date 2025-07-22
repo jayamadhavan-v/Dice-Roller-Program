@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Program</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="container" class="font-mono text-center text-[2rem] font-bold">
+        <h1>Dice Roller</h1>
+        <label id="inputLabel" for=""># Of dice : </label>
+        <input type="number" value="1" min="1" id="numOfDice" class="text-[2rem] w-[150px] text-center font-bold ">
+        <button  class="text-[1.5rem] px-[15px] py-[10px] rounded-lg border-none bg-sky-500 text-white font-bold cursor-pointer hover:bg-sky-600 active:bg-red-400 
+         " onclick="rollDice()">
+            Roll Dice
+        </button>
+        <div id="diceResult"></div>
+        <div id="diceImage" class="flex  gap-4 flex-wrap flex-row items-center justify-center"></div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
