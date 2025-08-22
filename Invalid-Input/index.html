@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invalid Input</title>
+  </head>
+  <body class="bg-sky-500">
+    <!-- style -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      input,button{
+        padding: 1em;
+        transition: background 0.3s ease;
+      }
+      input{
+        margin-top: 2.5em;
+      }
+      button{
+        margin-top: 2.5em;
+      }
+      input::placeholder {
+        color: rgb(54, 54, 54);
+      }
+
+      .shake{
+        animation: shake 0.5s ease-in-out;
+      }
+
+      @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+      }
+      .errorMessage{
+        color: red;
+        visibility: hidden;
+        transition: visibility 0.3s ease-in-out;
+      }
+
+    </style>
+    <!-- content -->
+    <form
+      style="padding: 5rem 2rem;"
+      action=""
+      id="myForm"
+      class="min-w-[25rem] bg-white absolute top-[50%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[0.8rem] shadow-lg "
+    >
+      <div id="errorMessage" 
+      class="errorMessage"
+      >Invalid Input</div>
+      <input
+        type="text"
+        id="inputField"
+        placeholder="Enter text here"
+        required
+        class="rounded-md mb-4 shadow-lg block w-full outline-none bg-neutral-100 border-1 border-solid border-blue-900 text-red-500"
+      />
+      <button onclick="validateInput()" type="submit"
+      class="rounded-md mb-4 shadow-lg block w-full bg-sky-500 text-white cursor-pointer"
+      >Submit</button>
+    </form>
+    <!-- script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
